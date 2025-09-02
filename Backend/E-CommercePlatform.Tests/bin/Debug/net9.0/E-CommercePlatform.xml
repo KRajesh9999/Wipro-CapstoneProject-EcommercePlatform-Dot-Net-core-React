@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>E-CommercePlatform</name>
+    </assembly>
+    <members>
+        <member name="T:E_CommercePlatform.Controllers.AuthController">
+            <summary>
+            Authentication controller for user login and registration
+            </summary>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.AuthController.Login(Common.DTOs.LoginDto)">
+            <summary>
+            Authenticates a user and returns a JWT token
+            </summary>
+            <param name="loginDto">User login credentials</param>
+            <returns>JWT token for authenticated user</returns>
+            <response code="200">Returns JWT token when login is successful</response>
+            <response code="401">Returns error when credentials are invalid</response>
+            <response code="400">Returns error when request data is invalid</response>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.AuthController.Register(Common.DTOs.RegisterDto)">
+            <summary>
+            Registers a new user account
+            </summary>
+            <param name="registerDto">User registration information</param>
+            <returns>Success message when registration is completed</returns>
+            <response code="200">Returns success message when registration is successful</response>
+            <response code="400">Returns error when user already exists or data is invalid</response>
+        </member>
+        <member name="T:E_CommercePlatform.Controllers.PaymentController">
+            <summary>
+            Payment processing controller for Stripe integration
+            </summary>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.PaymentController.ProcessPayment(Common.DTOs.PaymentDto)">
+            <summary>
+            Process payment using Stripe
+            </summary>
+            <param name="paymentDto">Payment details including amount and payment method</param>
+            <returns>Payment result with transaction ID</returns>
+            <response code="200">Payment processed successfully</response>
+            <response code="400">Payment failed or invalid data</response>
+            <response code="401">Unauthorized access</response>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.PaymentController.RefundPayment(E_CommercePlatform.Controllers.RefundDto)">
+            <summary>
+            Process refund for a payment (Admin only)
+            </summary>
+            <param name="refundDto">Refund details including transaction ID and amount</param>
+            <returns>Refund result</returns>
+            <response code="200">Refund processed successfully</response>
+            <response code="400">Refund failed</response>
+            <response code="401">Unauthorized access</response>
+            <response code="403">Forbidden - Admin role required</response>
+        </member>
+        <member name="T:E_CommercePlatform.Controllers.ProductController">
+            <summary>
+            Product management controller for CRUD operations
+            </summary>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.ProductController.GetAllProducts">
+            <summary>
+            Retrieves all products from the catalog
+            </summary>
+            <returns>List of all available products</returns>
+            <response code="200">Returns the list of products</response>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.ProductController.GetProduct(System.Int32)">
+            <summary>
+            Retrieves a specific product by ID
+            </summary>
+            <param name="id">The product ID</param>
+            <returns>Product details</returns>
+            <response code="200">Returns the requested product</response>
+            <response code="404">Product not found</response>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.ProductController.CreateProduct(Common.DTOs.ProductDto)">
+            <summary>
+            Creates a new product (Admin only)
+            </summary>
+            <param name="productDto">Product information</param>
+            <returns>Created product details</returns>
+            <response code="201">Product created successfully</response>
+            <response code="400">Invalid product data</response>
+            <response code="401">Unauthorized access</response>
+            <response code="403">Forbidden - Admin role required</response>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.ProductController.UpdateProduct(System.Int32,Common.DTOs.ProductDto)">
+            <summary>
+            Updates an existing product (Admin only)
+            </summary>
+            <param name="id">Product ID to update</param>
+            <param name="productDto">Updated product information</param>
+            <returns>No content on success</returns>
+            <response code="204">Product updated successfully</response>
+            <response code="400">Invalid product data</response>
+            <response code="401">Unauthorized access</response>
+            <response code="403">Forbidden - Admin role required</response>
+            <response code="404">Product not found</response>
+        </member>
+        <member name="M:E_CommercePlatform.Controllers.ProductController.DeleteProduct(System.Int32)">
+            <summary>
+            Deletes a product (Admin only)
+            </summary>
+            <param name="id">Product ID to delete</param>
+            <returns>No content on success</returns>
+            <response code="204">Product deleted successfully</response>
+            <response code="401">Unauthorized access</response>
+            <response code="403">Forbidden - Admin role required</response>
+            <response code="404">Product not found</response>
+        </member>
+    </members>
+</doc>
