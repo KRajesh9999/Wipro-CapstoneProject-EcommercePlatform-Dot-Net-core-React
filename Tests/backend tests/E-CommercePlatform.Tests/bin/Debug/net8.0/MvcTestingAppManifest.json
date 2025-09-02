@@ -1,0 +1,10 @@
+{
+  "AuthenticationService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\E-CommercePlatform\\Backend\\E-CommercePlatform\\AuthenticationService",
+  "CartService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\E-CommercePlatform\\Backend\\E-CommercePlatform\\CartService",
+  "Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\E-CommercePlatform\\Backend\\E-CommercePlatform\\Common",
+  "Database, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\E-CommercePlatform\\Backend\\E-CommercePlatform\\Database",
+  "E-CommercePlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\E-CommercePlatform\\Backend\\E-CommercePlatform\\E-CommercePlatform",
+  "OrderService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\E-CommercePlatform\\Backend\\E-CommercePlatform\\OrderService",
+  "PaymentService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\E-CommercePlatform\\Backend\\E-CommercePlatform\\PaymentService",
+  "ProductService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\E-CommercePlatform\\Backend\\E-CommercePlatform\\ProductService"
+}

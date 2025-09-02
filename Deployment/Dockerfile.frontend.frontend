@@ -1,0 +1,11 @@
+FROM node:18-alpine AS build
+WORKDIR /app
+COPY ["Frontend/E-CommercePlatform_React/package*.json", "./"]
+RUN npm install
+COPY ["Frontend/E-CommercePlatform_React/", "."]
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

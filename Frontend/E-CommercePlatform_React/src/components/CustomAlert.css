@@ -1,0 +1,93 @@
+.custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* darker overlay for space effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  backdrop-filter: blur(4px); /* soft blur for futuristic effect */
+}
+
+.custom-alert-box {
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a); /* deep space gradient */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(157, 123, 255, 0.7), 
+              0 0 40px rgba(255, 255, 255, 0.2);
+  min-width: 320px;
+  max-width: 520px;
+  position: relative;
+  overflow: hidden;
+  animation: alertSlide 0.4s ease-out;
+}
+
+/* Add faint glittering stars on alert box */
+.custom-alert-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(1px 1px at 20% 30%, white, transparent),
+                    radial-gradient(1.5px 1.5px at 70% 60%, #d1d1d1, transparent),
+                    radial-gradient(1px 1px at 40% 80%, #f0f0f0, transparent),
+                    radial-gradient(1.2px 1.2px at 90% 20%, #cccccc, transparent);
+  animation: twinkle 6s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+.custom-alert-content {
+  position: relative;
+  z-index: 1;
+  padding: 28px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.custom-alert-content p {
+  margin: 0 0 20px 0;
+  font-size: 17px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(157, 123, 255, 0.7);
+}
+
+.custom-alert-btn {
+  background: linear-gradient(135deg, #9d7bff, #6f42c1);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  min-width: 100px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(157, 123, 255, 0.7);
+}
+
+.custom-alert-btn:hover {
+  background: linear-gradient(135deg, #b88cff, #8a4dff);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes alertSlide {
+  from {
+    transform: scale(0.8) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Twinkling effect reused */
+@keyframes twinkle {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}

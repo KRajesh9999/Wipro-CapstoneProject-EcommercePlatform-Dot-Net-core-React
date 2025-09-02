@@ -1,0 +1,66 @@
+.product-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  background: #0d0d0d; /* space black */
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05),
+              0 0 20px rgba(138, 43, 226, 0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15),
+              0 0 25px rgba(138, 43, 226, 0.3),
+              0 0 45px rgba(75, 0, 130, 0.2);
+}
+
+/* Glitter twinkle overlay */
+.product-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(1px 1px at 20% 30%, #ffffff, transparent),
+                    radial-gradient(1.5px 1.5px at 70% 80%, #a78bfa, transparent),
+                    radial-gradient(2px 2px at 40% 60%, #f0f0f0, transparent);
+  background-size: cover;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: twinkle 4s infinite ease-in-out alternate;
+}
+
+.product-image {
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  border-radius: 12px 12px 0 0;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-card .btn {
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+
+.product-card .btn:hover {
+  background: linear-gradient(135deg, #9333ea, #c084fc);
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.5);
+}
+
+/* Twinkle animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}

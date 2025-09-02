@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary-color: #64748b;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --light-bg: #0a0a0f; /* space black */
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.6);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* Space Black Background with Glitter */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle at top, #0f0f1a 0%, #000000 100%);
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Glitter Stars Layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px);
+  background-size: 3px 3px;
+  animation: twinkle 6s infinite ease-in-out alternate;
+  pointer-events: none; /* don't block clicks */
+  z-index: -1;
+}
+
+/* Star Twinkling Animation */
+@keyframes twinkle {
+  0%   { opacity: 0.4; transform: scale(1); }
+  50%  { opacity: 0.8; transform: scale(1.05); }
+  100% { opacity: 0.4; transform: scale(1); }
+}
