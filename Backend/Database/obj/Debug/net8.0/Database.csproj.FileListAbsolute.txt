@@ -1,0 +1,13 @@
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\bin\Debug\net8.0\Database.deps.json
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\bin\Debug\net8.0\Database.dll
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\bin\Debug\net8.0\Database.pdb
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\Database.csproj.AssemblyReference.cache
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\Database.AssemblyInfoInputs.cache
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\Database.AssemblyInfo.cs
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\Database.csproj.CoreCompileInputs.cache
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\Database.sourcelink.json
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\Database.dll
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\refint\Database.dll
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\Database.pdb
+E:\WiproAssignments\E-Commerce-Capstone\Backend .NET\E-CommercePlatform\Database\obj\Debug\net8.0\ref\Database.dll
